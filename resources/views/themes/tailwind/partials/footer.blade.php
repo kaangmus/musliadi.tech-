@@ -1,6 +1,6 @@
 
 <!-- Section 1 -->
-<footer class="@if(Request::is('/')){{ 'bg-white' }}@else{{ 'bg-gray-50' }}@endif">
+{{-- <footer class="@if(Request::is('/')){{ 'bg-white' }}@else{{ 'bg-gray-50' }}@endif">
     <div class="px-8 pt-16 mx-auto lg:px-12 xl:px-16 max-w-7xl">
         <div class="flex flex-wrap items-start justify-between pb-20">
             <a href="#_" class="flex items-center w-auto text-lg font-bold md:w-1/6">
@@ -206,7 +206,7 @@
             </ul>
         </div>
     </div>
-</footer>
+</footer> --}}
 
 @if(!auth()->guest() && auth()->user()->hasAnnouncements())
     @include('theme::partials.announcements')
