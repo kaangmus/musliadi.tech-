@@ -10,7 +10,7 @@ class BlogController extends \App\Http\Controllers\Controller
 {
     public function index(){
     	
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(6);
+        $posts = Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->paginate(6);
         $categories = Category::all();
 
     	$seo = [
